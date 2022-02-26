@@ -2,6 +2,8 @@
 <manifest>
 <remote name="me" 
         fetch="https://github.com/Abhi2354" />
+<remote name="ian"
+        fetch="https://github.com/iaiaian1"/>
   <!-- Kernels -->
    <project path="kernel/xiaomi/mi439" name="kernel_xiaomi_sdm439" remote="me" revision="12"  clone-depth="1" />
    
@@ -16,11 +18,34 @@
   <!-- Bringup for FAILED: ninja: 'external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml' --> 
    <project path="external/ant-wireless/antradio-library" name="external_ant-wireless_antradio-library" remote="me" revision="snow"/>
    
-  <!-- Display and Media and Audio Hal's --> 
-   <project path="hardware/qcom-caf/msm8996/audio" name="hardware_qcom_audio" remote="me" revision="8.6.2"/>
+  <!-- Replacements -->
    
-   <project path="hardware/qcom-caf/msm8996/media" name="hardware_qcom_media" remote="me" revision="8.6.2"/>
+  <!-- Display and nightlight fix-->
+   <remove-project name="platform_hardware_qcom_display"/>
+   <project path="hardware/qcom-caf/msm8996/display"
+            name="hardware_qcom_display"
+            remote="ian"
+            revision="8.6.2"/>
+   
+  <!-- Wi-Fi -->
+   <remove-project name="platform_hardware_qcom_wlan"/>
+   <project path="hardware/qcom-caf/wlan"
+            name="platform_hardware_qcom_wlan"
+            remote="ian"
+            revision="sushi"/>
 
-   <project path="hardware/qcom-caf/msm8996/display" name="hardware_qcom_display" remote="me" revision="8.6.2"/>
+<!-- Media Bringup -->
+   <remove-project name="platform_hardware_qcom_media"/>
+   <project path="hardware/qcom-caf/msm8996/media"
+            name="hardware_qcom_media"
+            remote="ian"
+            revision="8.6.2"/>
+
+<!-- Audio bringup -->
+   <remove-project name="platform_hardware_qcom_audio"/>
+   <project path="hardware/qcom-caf/msm8996/audio"
+            name="hardware_qcom_audio"
+            remote="ian"
+            revision="8.6.2"/>
 
 </manifest>
