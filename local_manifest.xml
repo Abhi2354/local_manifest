@@ -4,31 +4,31 @@
         fetch="https://github.com/Abhi2354" />
 <remote name="ian"
         fetch="https://github.com/iaiaian1"/>
+<remote  name="Linos"
+        fetch="https://github.com/"
+
   <!-- Kernels -->
-   <project path="kernel/xiaomi/mi439" name="kernel_xiaomi_sdm439" remote="me" revision="12"  clone-depth="1" />
+   <project path="kernel/xiaomi/sdm439" name="android_kernel_xiaomi_sdm439" remote="me" revision="a12/main"  clone-depth="1" />
    
   <!-- Device Trees -->
-   <project path="device/xiaomi/mi439" name="device_xiaomi_mi439" remote="me" revision="shapeshift"/>
-   <project path="device/xiaomi/sdm439-common" name="device_xiaomi_sdm439-common" remote="me" revision="shapeshift"/>
+   <project path="device/xiaomi/olives" name="device_xiaomi_olives" remote="me" revision="octavi"/>
+   <project path="device/xiaomi/sdm439-common" name="device_xiaomi_sdm439-common" remote="me" revision="12.0"/>
 
   <!-- Vendor Trees -->
-   <project path="vendor/xiaomi/mi439" name="vendor_xiaomi_mi439" remote="me" revision="12.0"/>
+   <project path="vendor/xiaomi/olives" name="vendor_xiaomi_olives" remote="me" revision="12.0"/>
    <project path="vendor/xiaomi/sdm439-common" name="vendor_xiaomi_sdm439-common" remote="me" revision="12.0"/>
   
-  <!-- Bringup for FAILED: ninja: 'external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml' --> 
-   <project path="external/ant-wireless/antradio-library" name="external_ant-wireless_antradio-library" remote="me" revision="snow"/>
-   
   <!-- Replacements -->
    
   <!-- Display and nightlight fix-->
-   <remove-project name="android_hardware_qcom_display"/>
+   <remove-project name=""/>
    <project path="hardware/qcom-caf/msm8996/display"
             name="hardware_qcom_display"
             remote="ian"
             revision="8.6.2"/>
    
   <!-- Wi-Fi -->
-   <remove-project name="android_hardware_qcom_wlan"/>
+   <remove-project name="platform_hardware_qcom_wlan"/>
    <project path="hardware/qcom-caf/wlan"
             name="platform_hardware_qcom_wlan"
             remote="ian"
