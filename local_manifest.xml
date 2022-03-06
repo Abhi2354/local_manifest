@@ -4,8 +4,8 @@
         fetch="https://github.com/Abhi2354" />
 <remote name="ian"
         fetch="https://github.com/iaiaian1"/>
-<remote  name="Linos"
-        fetch="https://github.com/"
+<remote  name="LineageOS"
+        fetch="https://github.com/LineageOS"/>
 
   <!-- Kernels -->
    <project path="kernel/xiaomi/sdm439" name="android_kernel_xiaomi_sdm439" remote="me" revision="a12/main"  clone-depth="1" />
