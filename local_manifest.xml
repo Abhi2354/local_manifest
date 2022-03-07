@@ -1,59 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<remote name="me" 
-        fetch="https://github.com/Abhi2354" />
-<remote name="ian"
-        fetch="https://github.com/iaiaian1"/>
-<remote  name="Linos"
-        fetch="https://github.com/LineageOS"/>
 
-  <!-- Kernels -->
-   <project path="kernel/xiaomi/sdm439" name="android_kernel_xiaomi_sdm439" remote="me" revision="a12/main"  clone-depth="1" />
+   <remote name="ian"
+           fetch="https://github.com/iaiaian1"/>
+   <remote name="me"
+           fetch="https://github.com/Abhi2354"/>
+   <remote name="Linos"
+           fetch="https://github.com/LineageOS"/>
+
+<!-- Kernels -->
+   <project path="kernel/xiaomi/sdm439"
+            name="android_kernel_xiaomi_sdm439"
+            remote="me"
+            revision="a12/main"
+            clone-depth="1"/>
+
+<!-- Device Tree and Common Device Tree -->
+   <project path="device/xiaomi/olives"
+            name="device_xiaomi_olives"
+            remote="me"
+            revision="cherish"/>
    
-  <!-- Device Trees -->
-   <project path="device/xiaomi/olives" name="device_xiaomi_olives" remote="me" revision="octavi"/>
-   <project path="device/xiaomi/sdm439-common" name="device_xiaomi_sdm439-common" remote="me" revision="12.0"/>
-
-  <!-- Vendor Trees -->
-   <project path="vendor/xiaomi/olives" name="vendor_xiaomi_olives" remote="me" revision="12.0"/>
-   <project path="vendor/xiaomi/sdm439-common" name="vendor_xiaomi_sdm439-common" remote="me" revision="12.0"/>
+   <project path="device/xiaomi/sdm439-common"
+            name="device_xiaomi_sdm439-common"
+            remote="me"
+            revision="12.0"/>
   
-  <!-- Replacements -->
+<!-- Vendor Trees and Common Vendor Tree -->
+   <project path="vendor/xiaomi/olives"
+            name="vendor_xiaomi_olives"
+            remote="me"
+            revision="12.0"/>
 
+   <project path="vendor/xiaomi/sdm439-common" 
+            name="vendor_xiaomi_sdm439-common" 
+            remote="me"
+            revision="12.0" />
 
-<!-- Settings bug -->
-   <remove-project name="LineageOS/android_packages_resources_devicesettings"/>
-   <project path="packages/resources/devicesettings" 
-            name="android_packages_resources_devicesettings" 
-            remote="ian" 
-            revision="lineage-18.1"/>
+<!-- Replacements -->
    
-  <!-- Display and nightlight fix-->
-   <remove-project name="LineageOS/android_hardware_qcom_display"/>
+<!-- Display and nightlight fix-->
+   <remove-project name="hardware_qcom-caf_msm8996_display"/>
    <project path="hardware/qcom-caf/msm8996/display"
             name="hardware_qcom_display"
             remote="ian"
             revision="8.6.2"/>
    
-  <!-- Wi-Fi -->
-   <remove-project name="platform_hardware_qcom_wlan"/>
+<!-- Wi-Fi -->
+   <remove-project name="android_hardware_qcom_wlan"/>
    <project path="hardware/qcom-caf/wlan"
             name="platform_hardware_qcom_wlan"
             remote="ian"
             revision="sushi"/>
-
+   
+<!-- Audio bringup -->
+   <remove-project name="hardware_qcom-caf_msm8996_audio"/>
+   <project path="hardware/qcom-caf/msm8996/audio"
+            name="hardware_qcom_audio"
+            remote="ian"
+            revision="8.6.2"/>
+   
 <!-- Media Bringup -->
-   <remove-project name="LineageOS/android_hardware_qcom_media"/>
+   <remove-project name="hardware_qcom-caf_msm8996_media"/>
    <project path="hardware/qcom-caf/msm8996/media"
             name="hardware_qcom_media"
             remote="ian"
             revision="8.6.2"/>
 
-<!-- Audio bringup -->
-   <remove-project name="LineageOS/android_hardware_qcom_audio"/>
-   <project path="hardware/qcom-caf/msm8996/audio"
-            name="hardware_qcom_audio"
-            remote="ian"
-            revision="8.6.2"/>
+<!-- Settings bug -->
+   <remove-project name="LineageOS/android_packages_resources_devicesettings"/>
+   <project path="packages/resources/devicesettings" 
+            name="android_packages_resources_devicesettings" 
+            remote="Linos" 
+            revision="lineage-18.1"/> 
 
-</manifest>
+<!-- Radio additional enable only when all bugs are fixed -->
+   <project path="packages/apps/FMRadio"
+            name="android_packages_apps_FMRadio"
+            remote="ian"
+            revision="lineage-18.1"/>
+
+  </manifest>
