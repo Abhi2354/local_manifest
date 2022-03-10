@@ -65,10 +65,5 @@
             remote="ian"
             revision="8.6.2"/>
 
-<!-- Radio additional enable only when all bugs are fixed -->
-   <project path="packages/apps/FMRadio"
-            name="android_packages_apps_FMRadio"
-            remote="ian"
-            revision="lineage-18.1"/>
 
   </manifest>
