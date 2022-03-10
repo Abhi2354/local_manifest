@@ -5,8 +5,6 @@
            fetch="https://github.com/iaiaian1"/>
    <remote name="me"
            fetch="https://github.com/Abhi2354"/>
-   <remote name="Linos"
-           fetch="https://github.com/LineageOS"/>
 
 <!-- Kernels -->
    <project path="kernel/xiaomi/sdm439"
@@ -16,10 +14,10 @@
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
-   <project path="device/xiaomi/olives"
-            name="device_xiaomi_olives"
+   <project path="device/xiaomi/mi439"
+            name="device_xiaomi_mi439"
             remote="me"
-            revision="lighthouse"/>
+            revision="nad-12.0"/>
    
    <project path="device/xiaomi/sdm439-common"
             name="device_xiaomi_sdm439-common"
@@ -27,8 +25,8 @@
             revision="12.0"/>
   
 <!-- Vendor Trees and Common Vendor Tree -->
-   <project path="vendor/xiaomi/olives"
-            name="vendor_xiaomi_olives"
+   <project path="vendor/xiaomi/mi439"
+            name="vendor_xiaomi_mi439"
             remote="me"
             revision="12.0"/>
 
@@ -40,28 +38,28 @@
 <!-- Replacements -->
    
 <!-- Display and nightlight fix-->
-   <remove-project name="android_hardware_qcom_display"/>
+   <remove-project name="hardware_qcom_display"/>
    <project path="hardware/qcom-caf/msm8996/display"
             name="hardware_qcom_display"
             remote="ian"
             revision="8.6.2"/>
    
 <!-- Wi-Fi -->
-   <remove-project name="android_hardware_qcom_wlan"/>
+   <remove-project name="hardware_qcom_wlan"/>
    <project path="hardware/qcom-caf/wlan"
             name="platform_hardware_qcom_wlan"
             remote="ian"
             revision="sushi"/>
    
 <!-- Audio bringup -->
-   <remove-project name="android_hardware_qcom_audio"/>
+   <remove-project name="hardware_qcom_audio"/>
    <project path="hardware/qcom-caf/msm8996/audio"
             name="hardware_qcom_audio"
             remote="ian"
             revision="8.6.2"/>
    
 <!-- Media Bringup -->
-   <remove-project name="android_hardware_qcom_media"/>
+   <remove-project name="hardware_qcom_media"/>
    <project path="hardware/qcom-caf/msm8996/media"
             name="hardware_qcom_media"
             remote="ian"
