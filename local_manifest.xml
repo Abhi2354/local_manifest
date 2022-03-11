@@ -3,8 +3,13 @@
 
    <remote name="ian"
            fetch="https://github.com/iaiaian1"/>
+
    <remote name="me"
            fetch="https://github.com/Abhi2354"/>
+
+   <remote name="pxl"
+           fetch="https://github.com/PixelExperience"/>
+
 
 <!-- Kernels -->
    <project path="kernel/xiaomi/sdm439"
@@ -36,6 +41,11 @@
             revision="12.0-CAF" />
 
 <!-- Replacements -->
+
+   <project path="device/qcom/sepolicy-legacy-um"
+            name="device_qcom_sepolicy-legacy-um"
+            remote="pxl"
+            revision="twelve"/>
    
 <!-- Display and nightlight fix-->
    <remove-project name="android_hardware_qcom_display"/>
@@ -64,6 +74,12 @@
             name="hardware_qcom_media"
             remote="ian"
             revision="8.6.2"/>
+
+   <!-- LIBFM -->
+   <project path="vendor/qcom/opensource/libfmjni"
+            name="vendor_qcom_opensource_libfmjni"
+            remote="pxl"
+            revision="twelve"/>
 
 
   </manifest>
