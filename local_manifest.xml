@@ -7,10 +7,10 @@
            fetch="https://github.com/Abhi2354"/>
 
 <!-- Kernels -->
-   <project path="kernel/xiaomi/sdm439"
-            name="android_kernel_xiaomi_sdm439"
+   <project path="lolz/kernel/redmi8"
+            name="lolz_kernel_redmi8"
             remote="me"
-            revision="a12/main"
+            revision="V16"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
