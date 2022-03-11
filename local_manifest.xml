@@ -42,8 +42,8 @@
 
 <!-- Replacements -->
 
-   <project path="device/qcom/sepolicy-legacy-um"
-            name="device_qcom_sepolicy-legacy-um"
+   <remove-project name="android_device_qcom_sepolicy"/>
+            name="device_qcom_sepolicy"
             remote="pxl"
             revision="twelve"/>
    
