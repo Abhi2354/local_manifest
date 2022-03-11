@@ -8,9 +8,9 @@
 
 <!-- Kernels -->
    <project path="kernel/xiaomi/sdm439"
-            name="kernel_xiaomi_sdm439"
+            name="android_kernel_xiaomi_sdm439"
             remote="me"
-            revision="nezz"
+            revision="a12/main"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
