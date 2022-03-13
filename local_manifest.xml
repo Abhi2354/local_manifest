@@ -14,7 +14,7 @@
    <project path="kernel/xiaomi/sdm439"
             name="android_kernel_xiaomi_sdm439"
             remote="me"
-            revision="V17"
+            revision="a12/main"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
