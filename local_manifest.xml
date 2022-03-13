@@ -4,6 +4,9 @@
    <remote name="me"
            fetch="https://github.com/Abhi2354"/>
 
+   <remote name="line"
+           fetch="https://github.com/LineageOS"/>
+
    <remote name="krn"
            fetch="https://github.com/karan2354"/>
 
@@ -11,19 +14,19 @@
    <project path="kernel/xiaomi/sdm439"
             name="android_kernel_xiaomi_sdm439"
             remote="me"
-            revision="a12/main"
+            revision="V17"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
    <project path="device/xiaomi/olives"
             name="device_xiaomi_olives"
             remote="me"
-            revision="spark"/>
+            revision="crdroid"/>
    
    <project path="device/xiaomi/sdm439-common"
             name="device_xiaomi_sdm439-common"
             remote="me"
-            revision="spark"/>
+            revision="12.0"/>
   
 <!-- Vendor Trees and Common Vendor Tree -->
    <project path="vendor/xiaomi/olives"
@@ -39,31 +42,37 @@
 <!-- Replacements -->
    
 <!-- Display and nightlight fix-->
-   <remove-project name="android_hardware_qcom_display"/>
+   <remove-project name="crdroidandroid/android_hardware_qcom_display"/>
    <project path="hardware/qcom-caf/msm8996/display"
             name="hardware_qcom_display"
             remote="krn"
             revision="8.6.2"/>
    
 <!-- Wi-Fi -->
-   <remove-project name="android_hardware_qcom_wlan"/>
+   <remove-project name="crdroidandroid/android_hardware_qcom_wlan"/>
    <project path="hardware/qcom-caf/wlan"
             name="platform_hardware_qcom_wlan"
             remote="krn"
             revision="sushi"/>
    
 <!-- Audio bringup -->
-   <remove-project name="android_hardware_qcom_audio"/>
+   <remove-project name="crdroidandroid/android_hardware_qcom_audio"/>
    <project path="hardware/qcom-caf/msm8996/audio"
             name="hardware_qcom_audio"
             remote="krn"
             revision="8.6.2"/>
    
 <!-- Media Bringup -->
-   <remove-project name="android_hardware_qcom_media"/>
+   <remove-project name="crdroidandroid/android_hardware_qcom_media"/>
    <project path="hardware/qcom-caf/msm8996/media"
             name="hardware_qcom_media"
             remote="krn"
             revision="8.6.2"/>
+
+<!--antradio-library--> 
+   <project path="external/ant-wireless/antradio-library" 
+            name="android_external_ant-wireless_antradio-library"
+            revision="lineage-18.1" 
+            remote="line" />
 
   </manifest>
