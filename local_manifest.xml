@@ -42,11 +42,15 @@
             remote="me"
             revision="11.0" />
 
-   <remove-project name="LineageOS/android_hardware_qcom_audio"/>
+   <remove-project name="android_hardware_qcom_audio"/>
    <project path="hardware/qcom-caf/msm8996/audio"
             name="android_hardware_qcom_audio"
             remote="mi-sdm439"
             revision="lineage-18.1-caf-msm8996"/>
 
+   <project path="vendor/miuicamera"
+            name="ArrowOS-Devices/android_vendor_miuicamera"
+            remote="github"
+            revision="arrow-11.0-a3"/>
 
   </manifest>
