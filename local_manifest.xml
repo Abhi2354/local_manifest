@@ -2,68 +2,51 @@
 <manifest>
 
    <remote name="me"
-           fetch="https://github.com/Abhi2354"/>
-
-   <remote name="krn"
            fetch="https://github.com/karan2354"/>
+
+   <remote name="chuck"
+           fetch="https://github.com/ChuckProjekt"/>
+
+   <remote name="Linos"
+           fetch="https://github.com/LineageOS"/>
+
+   <remote name="mi-sdm439"
+           fetch="https://github.com/mi-sdm439"/>
 
 <!-- Kernels -->
    <project path="kernel/xiaomi/sdm439"
-            name="android_kernel_xiaomi_sdm439"
+            name="kernel_xiaomi_sdm439"
             remote="me"
             revision="a12/main"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
-   <project path="device/xiaomi/olives"
-            name="device_xiaomi_olives"
+   <project path="device/xiaomi/mi439"
+            name="device_xiaomi_mi439"
             remote="me"
-            revision="arrow"/>
+            revision="ssos"/>
    
    <project path="device/xiaomi/sdm439-common"
             name="device_xiaomi_sdm439-common"
             remote="me"
-            revision="12.0"/>
+            revision="11.0"/>
   
 <!-- Vendor Trees and Common Vendor Tree -->
-   <project path="vendor/xiaomi/olives"
-            name="vendor_xiaomi_olives"
+   <project path="vendor/xiaomi/mi439"
+            name="vendor_xiaomi_mi439"
             remote="me"
-            revision="12.0"/>
+            revision="11.0"/>
 
    <project path="vendor/xiaomi/sdm439-common" 
             name="vendor_xiaomi_sdm439-common" 
             remote="me"
-            revision="12.0" />
-  
-<!-- Replacements -->
-   
-<!-- Display and nightlight fix-->
-   <remove-project name="android_hardware_qcom_display"/>
-   <project path="hardware/qcom-caf/msm8996/display"
-            name="hardware_qcom_display"
-            remote="krn"
-            revision="8.6.2"/>
-   
-<!-- Wi-Fi -->
-   <remove-project name="android_hardware_qcom_wlan"/>
-   <project path="hardware/qcom-caf/wlan"
-            name="platform_hardware_qcom_wlan"
-            remote="krn"
-            revision="sushi"/>
-   
-<!-- Audio bringup -->
-   <remove-project name="android_hardware_qcom_audio"/>
+            revision="11.0" />
+
+   <remove-project name="LineageOS/android_hardware_qcom_audio"/>
    <project path="hardware/qcom-caf/msm8996/audio"
-            name="hardware_qcom_audio"
-            remote="krn"
-            revision="8.6.2"/>
-   
-<!-- Media Bringup -->
-   <remove-project name="android_hardware_qcom_media"/>
-   <project path="hardware/qcom-caf/msm8996/media"
-            name="hardware_qcom_media"
-            remote="krn"
-            revision="8.6.2"/>
+            name="android_hardware_qcom_audio"
+            remote="mi-sdm439"
+            revision="lineage-18.1-caf-msm8996"/>
+
 
   </manifest>
