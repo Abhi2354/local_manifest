@@ -17,14 +17,14 @@
    <project path="kernel/xiaomi/sdm439"
             name="kernel_xiaomi_sdm439"
             remote="me"
-            revision="a12/main"
+            revision="inline/teyvat3"
             clone-depth="1"/>
 
 <!-- Device Tree and Common Device Tree -->
    <project path="device/xiaomi/mi439"
             name="device_xiaomi_mi439"
             remote="me"
-            revision="crd"/>
+            revision="ss"/>
    
    <project path="device/xiaomi/sdm439-common"
             name="device_xiaomi_sdm439-common"
@@ -59,10 +59,5 @@
             name="android_hardware_qcom_display"
             remote="Linos"
             revision="lineage-18.1-caf-msm8996"/>
-
-   <project path="vendor/miuicamera"
-            name="ArrowOS-Devices/android_vendor_miuicamera"
-            remote="github"
-            revision="arrow-11.0-a3"/>
 
   </manifest>
