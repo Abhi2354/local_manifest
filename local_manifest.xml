@@ -48,5 +48,10 @@
             remote="mi-sdm439"
             revision="lineage-19.1-caf"/>
 
+   <project path="packages/apps/FMRadio" 
+            name="android_packages_apps_FMRadio"
+            remote="mi-sdm439" 
+            revision="lineage-18.1"/>
+
 
   </manifest>
