@@ -15,7 +15,7 @@
    <project path="device/xiaomi/lisa"
             name="device_xiaomi_lisa"
             remote="me"
-            revision="cherish"/>
+            revision="twelve"/>
   
 <!-- Vendor Tree -->
    <project path="vendor/xiaomi/lisa"
